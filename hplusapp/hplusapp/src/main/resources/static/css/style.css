@@ -302,6 +302,7 @@
 	input[type="email"],
 	select {
 		height: 2.75em;
+		width: auto;
 	}
 
 	textarea {

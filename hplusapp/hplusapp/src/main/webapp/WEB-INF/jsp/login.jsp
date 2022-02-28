@@ -23,25 +23,24 @@
 		<!-- Main -->
 			<section id="main" class="wrapper style1">
 				<header class="major">
-					<h2>No Sidebar</h2>
-					<p>Faucibus neque adipiscing mi lorem semper blandit</p>
+					<h2>Login</h2>
+
 				</header>
 				<div class="container">
 
 					<!-- Content -->
+					<span>${dataSaved}</span>
 						<section id="content">
-							<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-							<h3>Dolore Amet Consequat</h3>
-							<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
-							<h3>Sed Magna Ornare</h3>
-							<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
-							<ul>
-								<li>Faucibus orci lobortis ac adipiscing integer.</li>
-								<li>Col accumsan arcu mi aliquet placerat.</li>
-								<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-								<li>Blandit massa non blandit tempor interdum.</li>
-								<li>Lacinia mattis arcu nascetur lobortis.</li>
-							</ul>
+                            <div class="container tagline">
+
+                                        <form action="#" method="post" >
+                                            <label>Username</label> <input type="text" name="username"/><br />
+                                            <label>Password</label> <input type="password" name="password"/><br />
+                                             <input type="submit" value="Login">
+                                        </form>
+                                        <br/>
+                                         <a class="card-title" href="/goToRegistration">Register new user? Click here</a>
+                            </div>
 						</section>
 
 				</div>

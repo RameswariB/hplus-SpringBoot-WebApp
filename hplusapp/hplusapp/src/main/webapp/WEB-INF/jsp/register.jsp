@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <head>
     <meta charset="UTF-8">
@@ -23,25 +24,32 @@
 		<!-- Main -->
 			<section id="main" class="wrapper style1">
 				<header class="major">
-					<h2>No Sidebar</h2>
-					<p>Faucibus neque adipiscing mi lorem semper blandit</p>
+					<h2>Registration</h2>
+
 				</header>
 				<div class="container">
 
 					<!-- Content -->
 						<section id="content">
-							<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-							<h3>Dolore Amet Consequat</h3>
-							<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
-							<h3>Sed Magna Ornare</h3>
-							<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
-							<ul>
-								<li>Faucibus orci lobortis ac adipiscing integer.</li>
-								<li>Col accumsan arcu mi aliquet placerat.</li>
-								<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-								<li>Blandit massa non blandit tempor interdum.</li>
-								<li>Lacinia mattis arcu nascetur lobortis.</li>
-							</ul>
+                         <div class="container tagline">
+
+                                     <form:form method="post" action="/registeruser" modelAttribute="newuser">
+                                        <label>Username</label> <form:input path="username" type="text" /><br/>
+                                        <label>Password</label> <form:input path="password" type="password" /><br/>
+                                        <label>First Name</label> <form:input path="firstName" type="text" /><br/>
+                                        <label>Last Name</label> <form:input path="lastName" type="text" /><br/>
+                                        <label>What do you want to do? </label>
+                                        <form:radiobuttons path="activity" items="${activityItems}"/>
+
+                                        <br/><br/><br/>
+                                        <label>Date of birth</label>
+                                        <form:input path="dateOfBirth" type="date" /><br/>
+                                        <label>Gender</label>
+                                        <form:select path="gender" items="${genderItems}"/>
+                                        <br/>
+                                        <input type="submit" value="Submit" id="submit">
+                                    </form:form>
+                                </div>
 						</section>
 
 				</div>
